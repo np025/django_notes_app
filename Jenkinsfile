@@ -19,13 +19,14 @@ pipeline{
             }
         }
         
-        stage("Build") {
+        stage("Build Image") {
             steps{
                 script{
                     docker_build("nikki2507","nodes-app","latest")
                 }
             }
         }
+        
         stage("Push To Docker hub") {
             steps{
                 script{
@@ -33,7 +34,8 @@ pipeline{
                 }
             }
         }
-        stage("Deploy") {
+        
+        stage("Deploy to Docker") {
             steps{
                 script{
                     docker_deploy()
