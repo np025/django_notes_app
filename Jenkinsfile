@@ -26,7 +26,6 @@ pipeline{
         }
         stage("Push To Docker hub") {
             steps{
-                echo "Pushing Image to docker hub"
                 script{
                     docker_push("nodes-app","latest","nikki2507")
                 }
