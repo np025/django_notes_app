@@ -42,11 +42,5 @@ pipeline{
                 }
             }
         }
-
-        stage("Finish") {
-            steps{
-                sh "Pipeline Executed successfully"
-            }
-        }
     }
 }
